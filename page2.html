@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Recognition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background-image: url('Background.jpg'); /* 배경 이미지 적용 */
+      background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
+    }
+
+    #video, canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* 화면 중앙으로 이동 */
+    } 
+
+    #backButton {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" width="740" height="520" autoplay></video>
+  <canvas id="overlay"></canvas>
+  <button id="backButton" onclick="goToMainPage()">메인 페이지로 돌아가기</button>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="page2.js"></script>
+  <script>
+    function goToMainPage() {
+      window.location.href = 'main.html';
+    }
+  </script>
+</body>
+</html>

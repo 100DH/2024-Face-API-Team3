@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Recognition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background-image: url('Background.jpg'); /* 배경 이미지 적용 */
+      background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
+
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* 버튼 스타일 수정 */
+    #imageUpload {
+      padding: 15px 30px;
+      font-size: 30px;
+      background-color: black;
+      color: white; /* 흰색 글씨로 변경 */
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-bottom: 20px; /* 버튼 아래 여백 추가 */
+    }
+
+    #backToMainBtn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="backToMainBtn" onclick="backToMain()">메인 페이지로 돌아가기</button>
+  <input type="file" id="imageUpload">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="page1.js"></script>
+  <script>
+    function backToMain() {
+      window.location.href = "main.html";
+    }
+  </script>
+</body>
+</html>

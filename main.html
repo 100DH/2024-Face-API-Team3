@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>얼굴 인식 3조</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-image: url('Background.jpg'); /* 배경 이미지 적용 */
+      background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      font-size: 70px; //글자 크기
+    }
+
+    button {
+      margin-bottom: 30px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 50px; //버튼 크기
+    }
+  </style>
+</head>
+<body>
+  <h1>얼굴 인식 3조</h1>
+  <button onclick="openPage1()">사진 인식</button>
+  <button onclick="openPage2()">비디오 인식</button>
+
+  <script>
+    function openPage1() {
+       window.open('page1.html', '_self').close(); // 현재 창을 닫고 새 창을 엽니다.
+    }
+
+    function openPage2() {
+       window.open('page2.html', '_self').close(); // 현재 창을 닫고 새 창을 엽니다.
+    }
+  </script>
+</body>
+</html>
